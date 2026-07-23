@@ -1,135 +1,124 @@
-# Chivanski Studio — Site
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sobre | Chivanski Studio</title>
+<meta name="description" content="Conheça a história, os valores e o processo criativo por trás do Chivanski Studio.">
+<meta name="theme-color" content="#5E4A3E">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
-Site estático (HTML/CSS/JS puro, sem build), bilíngue PT/EN, responsivo, com
-modo claro/escuro automático, galeria de vídeos com modal, portfólio em
-formato flipbook e formulário de contato. Pronto pra publicar no **Cloudflare
-Pages** ou **GitHub Pages**.
+<header class="masthead">
+  <div class="masthead-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-script">Chivanski</span>
+      <span class="logo-studio">Studio</span>
+    </a>
+    <nav class="nav-toc" aria-label="Navegação principal">
+      <a href="index.html" data-pt="Início" data-en="Home">Início</a>
+      <a href="about.html" aria-current="page" data-pt="Sobre" data-en="About">Sobre</a>
+      <a href="portfolio.html" data-pt="Portfólio" data-en="Portfolio">Portfólio</a>
+      <a href="services.html" data-pt="Serviços" data-en="Services">Serviços</a>
+      <a href="media-kit.html" data-pt="Media Kit" data-en="Media Kit">Media Kit</a>
+      <a href="contact.html" data-pt="Contato" data-en="Contact">Contato</a>
+    </nav>
+    <div class="nav-controls">
+      <div class="lang-switch" aria-label="Idioma">
+        <button data-lang="pt" class="active">PT</button>
+        <button data-lang="en">EN</button>
+      </div>
+      <button class="icon-btn" data-theme-toggle aria-label="Alternar tema claro/escuro">
+        <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+        <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
+      </button>
+      <button class="nav-burger" data-nav-burger aria-label="Abrir menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
 
-## Estrutura
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow" data-pt="Sobre mim" data-en="About me">Sobre mim</p>
+      <h1 data-pt="Por trás da câmera, uma pessoa de verdade." data-en="Behind the camera, a real person.">Por trás da câmera,<br>uma pessoa de verdade.</h1>
+    </div>
+  </section>
 
-```
-index.html        → Home
-about.html         → Sobre mim
-portfolio.html     → Portfólio (flipbook + galeria de vídeos)
-services.html      → Serviços
-media-kit.html     → Media Kit (números, audiência, marcas)
-contact.html       → Contato (formulário + WhatsApp + redes)
-css/style.css       → Todo o design (cores, fontes, layout, animações)
-js/script.js         → Tema, idioma, menu mobile, reveals, modal de vídeo, formulário
-js/flipbook.js       → Lógica da "revista" do portfólio
-robots.txt / sitemap.xml → SEO básico
-```
+  <section style="padding-top:0;">
+    <div class="container hero-grid" style="align-items:start;">
+      <div class="hero-frame reveal">
+        <div class="placeholder-art">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4.5 5-6 8-6s6.5 1.5 8 6"/></svg>
+        </div>
+        <span class="frame-tag" data-pt="substitua por sua foto" data-en="replace with your photo">substitua por sua foto</span>
+      </div>
+      <div class="reveal">
+        <p data-pt="Oi, eu sou a Chivanski! [Escreva aqui sua história em 1–2 parágrafos: como começou a criar conteúdo, o que te tornou boa nisso, e por que marcas devem confiar em você.]" data-en="Hi, I'm Chivanski! [Write your story here in 1–2 paragraphs: how you started creating content, what makes you good at it, and why brands should trust you.]">Oi, eu sou a Chivanski! [Escreva aqui sua história em 1–2 parágrafos: como começou a criar conteúdo, o que te tornou boa nisso, e por que marcas devem confiar em você.]</p>
+        <p data-pt="[Segundo parágrafo — fale do seu estilo, o que te diferencia, e o tipo de marca que você mais gosta de trabalhar.]" data-en="[Second paragraph — talk about your style, what sets you apart, and the kind of brand you most enjoy working with.]">[Segundo parágrafo — fale do seu estilo, o que te diferencia, e o tipo de marca que você mais gosta de trabalhar.]</p>
+        <div class="brand-row" style="margin-top:30px;">
+          <span class="brand-chip">Beleza</span>
+          <span class="brand-chip">Moda</span>
+          <span class="brand-chip">Lifestyle</span>
+          <span class="brand-chip">Casa</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-## 1. O que trocar antes de publicar (checklist)
+  <hr class="divider">
 
-Faça uma busca por estes termos em todos os arquivos `.html` e troque pelo
-seu conteúdo real:
+  <section class="bg-surface">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow" data-pt="Como trabalho" data-en="How I work">Como trabalho</p>
+        <h2 data-pt="Processo, do briefing à entrega" data-en="Process, from brief to delivery">Processo, do briefing à entrega</h2>
+      </div>
+      <div class="grid-3 reveal">
+        <div class="service-card">
+          <span class="service-num">01</span>
+          <h3 data-pt="Briefing" data-en="Brief">Briefing</h3>
+          <p data-pt="Entendo a marca, o tom de voz e o objetivo da campanha." data-en="I get to know the brand, tone of voice and campaign goal.">Entendo a marca, o tom de voz e o objetivo da campanha.</p>
+        </div>
+        <div class="service-card">
+          <span class="service-num">02</span>
+          <h3 data-pt="Produção" data-en="Production">Produção</h3>
+          <p data-pt="Gravo e edito com uma estética autêntica e cuidada." data-en="I shoot and edit with an authentic, considered look.">Gravo e edito com uma estética autêntica e cuidada.</p>
+        </div>
+        <div class="service-card">
+          <span class="service-num">03</span>
+          <h3 data-pt="Entrega" data-en="Delivery">Entrega</h3>
+          <p data-pt="Arquivos prontos para ads, feed ou stories, no prazo combinado." data-en="Files ready for ads, feed or stories, on the agreed deadline.">Arquivos prontos para ads, feed ou stories, no prazo combinado.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-| Buscar | Trocar por |
-|---|---|
-| `5500000000000` | Seu número de WhatsApp com DDI+DDD, só números (ex: `5511999999999`) |
-| `contato@chivanskistudio.com` | Seu e-mail real |
-| `SEU_FORM_ID` (em `contact.html`) | Seu ID do [Formspree](https://formspree.io) (grátis) — crie uma conta, um formulário, e copie o ID da URL de ação |
-| `href="#"` nos ícones de redes sociais | Links reais do Instagram/TikTok/YouTube |
-| `[Escreva aqui sua história...]`, `[Nome da marca]`, `Marca A/B/C...` | Seus textos e marcas reais |
-| `SEU-DOMINIO.com` (em `robots.txt` e `sitemap.xml`) | Seu domínio final |
+  <section style="text-align:center;">
+    <div class="container">
+      <h2 data-pt="Vamos criar algo autêntico juntas?" data-en="Shall we create something authentic together?">Vamos criar algo<br>autêntico juntas?</h2>
+      <a href="contact.html" class="btn btn-primary" data-pt="Solicitar orçamento" data-en="Request a quote">Solicitar orçamento</a>
+    </div>
+  </section>
+</main>
 
-O formulário de contato **não envia nada** até você configurar o Formspree
-(ou outro serviço tipo [Web3Forms](https://web3forms.com), que também é
-grátis e não exige conta). Enquanto isso, ele mostra um aviso amigável em vez
-de falhar silenciosamente.
+<footer class="colophon">
+  <div class="container">
+    <div class="colophon-bottom">
+      <span>© <span data-year>2026</span> Chivanski Studio. <span data-pt="Todos os direitos reservados." data-en="All rights reserved.">Todos os direitos reservados.</span></span>
+      <a href="index.html" data-pt="Voltar ao início" data-en="Back to home">Voltar ao início</a>
+    </div>
+  </div>
+</footer>
 
-## 2. Textos em PT/EN
+<a class="wa-float" href="https://wa.me/5500000000000?text=Oi%20Chivanski!%20Vim%20do%20seu%20site%20e%20quero%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.2-.6.8-.8 1-.1.2-.3.2-.6.1-.2-.1-1-.4-1.9-1.2-.7-.6-1.2-1.4-1.3-1.6-.1-.2 0-.4.1-.5.1-.1.2-.3.4-.4.1-.2.2-.3.2-.5.1-.2 0-.4 0-.5s-.6-1.4-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.2-.9.9-.9 2.2s1 2.6 1.1 2.7c.1.2 2 3 4.7 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>
+</a>
 
-Cada elemento de texto tem dois atributos:
-
-```html
-<h1 data-pt="Texto em português" data-en="Text in English">Texto em português</h1>
-```
-
-O JS troca o conteúdo ao clicar em **PT/EN** no topo do site. Pra editar um
-texto, troque nos dois lugares: no atributo (`data-pt`/`data-en`) **e** no
-conteúdo visível do elemento (que é o que aparece antes do JS rodar — deixe
-sempre igual ao `data-pt`, já que o site abre em português por padrão, ou no
-idioma do navegador do visitante).
-
-Para `placeholder` de campos de formulário, use `data-pt-placeholder` /
-`data-en-placeholder`.
-
-## 3. Portfólio (flipbook) — usando seu PDF
-
-O `portfolio.html` já tem uma "revista" funcional com 5 páginas de exemplo.
-Pra usar seu PDF real:
-
-1. Exporte cada página do PDF como imagem (PNG ou JPG, ~1600px de largura).
-   Pode usar o site [pdf2image](https://www.ilovepdf.com/pdf_to_jpg) ou
-   qualquer conversor de sua preferência.
-2. Salve as imagens em `assets/portfolio/pagina-01.jpg`, `pagina-02.jpg`, etc.
-3. Em cada bloco `.flip-page` do `portfolio.html`, troque a `<div class="placeholder-art">...</div>` por:
-   ```html
-   <img src="assets/portfolio/pagina-01.jpg" alt="Página 1" style="width:100%;height:100%;object-fit:cover;">
-   ```
-4. Copie/cole o bloco `.flip-page` pra ter mais páginas — o JS (`flipbook.js`)
-   detecta automaticamente quantas páginas existem.
-
-## 4. Vídeos clicáveis
-
-Cada item da galeria em `portfolio.html` tem:
-
-```html
-<div class="gallery-item" data-video-src="LINK_AQUI" data-video-type="iframe">
-```
-
-- **YouTube/Vimeo**: use o link de "embed" (ex:
-  `https://www.youtube.com/embed/ID_DO_VIDEO`) com `data-video-type="iframe"`.
-- **Arquivo de vídeo próprio (.mp4)**: coloque o arquivo em `assets/videos/` e
-  use `data-video-type="video"`.
-- Instagram/TikTok não permitem embed direto de forma simples — o mais fácil
-  é baixar o vídeo (com permissão/seu próprio conteúdo) e usar como `.mp4`,
-  ou linkar para o post original em vez de abrir no modal.
-
-## 5. Cores e fontes
-
-Tudo fica em `css/style.css`, no topo, dentro de `:root` (modo claro) e
-`[data-theme="dark"]` (modo escuro):
-
-```css
---bg: #F8F5F1;      /* fundo */
---surface: #E9DFD4; /* cards, fundos secundários */
---ink: #222222;     /* texto principal */
---brand: #5E4A3E;   /* marrom café — marca */
---accent: #B08D57;  /* dourado — detalhes e CTAs */
-```
-
-As fontes (Cormorant Garamond, Inter, Parisienne) vêm do Google Fonts via
-`@import` no topo do CSS — não precisa instalar nada.
-
-## 6. Modo claro/escuro
-
-Por padrão o site segue o sistema operacional do visitante
-(`prefers-color-scheme`). O botão de sol/lua no menu permite forçar
-claro ou escuro manualmente (fica salvo no navegador da pessoa).
-
-## 7. Publicar de graça
-
-### Cloudflare Pages
-1. Crie uma conta em [pages.cloudflare.com](https://pages.cloudflare.com).
-2. "Create a project" → "Upload assets" (ou conecte um repositório do GitHub).
-3. Arraste a pasta inteira do site (sem subir o `README.md` é opcional, tanto faz).
-4. Não precisa configurar build command — é site estático puro.
-5. Pronto: você recebe uma URL `.pages.dev`, com opção de conectar domínio próprio depois.
-
-### GitHub Pages
-1. Crie um repositório no GitHub e suba todos os arquivos.
-2. Vá em **Settings → Pages**.
-3. Em "Source", selecione a branch `main` e a pasta `/root`.
-4. Salve — em alguns minutos o site fica no ar em `usuario.github.io/repositorio`.
-
-## 8. SEO básico já incluso
-
-- `<title>` e `<meta name="description">` únicos por página.
-- `robots.txt` e `sitemap.xml` (troque `SEU-DOMINIO.com` pelo domínio real).
-- HTML semântico (`header`, `main`, `footer`, hierarquia de `h1`/`h2`).
-- Depois de publicar, cadastre o site no
-  [Google Search Console](https://search.google.com/search-console) pra ele
-  ser indexado mais rápido.
+<script src="js/script.js"></script>
+</body>
+</html>
