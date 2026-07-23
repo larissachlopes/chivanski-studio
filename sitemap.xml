@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://SEU-DOMINIO.com/index.html</loc><priority>1.0</priority></url>
-  <url><loc>https://SEU-DOMINIO.com/about.html</loc><priority>0.8</priority></url>
-  <url><loc>https://SEU-DOMINIO.com/services.html</loc><priority>0.9</priority></url>
-  <url><loc>https://SEU-DOMINIO.com/portfolio.html</loc><priority>0.9</priority></url>
-  <url><loc>https://SEU-DOMINIO.com/work-with-me.html</loc><priority>0.8</priority></url>
-  <url><loc>https://SEU-DOMINIO.com/contact.html</loc><priority>0.7</priority></url>
+  <url><loc>https://larissachlopes.github.io/chivanski-studio/index.html</loc><priority>1.0</priority></url>
+  <url><loc>https://larissachlopes.github.io/chivanski-studio/about.html</loc><priority>0.8</priority></url>
+  <url><loc>https://larissachlopes.github.io/chivanski-studio/services.html</loc><priority>0.9</priority></url>
+  <url><loc>https://larissachlopes.github.io/chivanski-studio/portfolio.html</loc><priority>0.9</priority></url>
+  <url><loc>https://larissachlopes.github.io/chivanski-studio/work-with-me.html</loc><priority>0.8</priority></url>
+  <url><loc>https://larissachlopes.github.io/chivanski-studio/contact.html</loc><priority>0.7</priority></url>
 </urlset>
