@@ -1,23 +1,30 @@
 # Chivanski Studio — Site
 
 Site estático (HTML/CSS/JS puro, sem build), bilíngue PT/EN, responsivo, com
-modo claro/escuro automático, galeria de vídeos com modal, portfólio em
-formato flipbook e formulário de contato. Pronto pra publicar no **Cloudflare
-Pages** ou **GitHub Pages**.
+modo claro/escuro automático, galeria de vídeos filtrável, portfólio em
+formato flipbook, FAQ e formulário de contato. Pronto pra publicar no
+**Cloudflare Pages** ou **GitHub Pages**.
+
+## Posicionamento
+
+O site foi estruturado em torno de **"você vende conteúdo, não audiência"** —
+por isso não há números de seguidores, engajamento ou alcance em lugar
+nenhum. O foco é mostrar capacidade de produção (roteiro, gravação, edição)
+e processo profissional.
 
 ## Estrutura
 
 ```
-index.html        → Home
-about.html         → Sobre mim
-portfolio.html     → Portfólio (flipbook + galeria de vídeos)
-services.html      → Serviços
-media-kit.html     → Media Kit (números, audiência, marcas)
-contact.html       → Contato (formulário + WhatsApp + redes)
-css/style.css       → Todo o design (cores, fontes, layout, animações)
-js/script.js         → Tema, idioma, menu mobile, reveals, modal de vídeo, formulário
-js/flipbook.js       → Lógica da "revista" do portfólio
-robots.txt / sitemap.xml → SEO básico
+index.html          → Home
+about.html           → Sobre (pesquisadora/escritora/comunicadora + Background)
+services.html        → O que eu faço (serviços, nichos, processo, o que está incluso)
+portfolio.html        → Portfólio por categoria (flipbook + galeria de vídeos filtrável)
+work-with-me.html      → Work With Me (como contratar, termos, FAQ)
+contact.html          → Contato (formulário + WhatsApp + redes)
+css/style.css          → Todo o design (cores, fontes, layout, animações)
+js/script.js            → Tema, idioma, menu mobile, reveals, modal de vídeo, filtro, formulário
+js/flipbook.js           → Lógica da "revista" do portfólio
+robots.txt / sitemap.xml  → SEO básico
 ```
 
 ## 1. O que trocar antes de publicar (checklist)
@@ -29,15 +36,19 @@ seu conteúdo real:
 |---|---|
 | `5500000000000` | Seu número de WhatsApp com DDI+DDD, só números (ex: `5511999999999`) |
 | `contato@chivanskistudio.com` | Seu e-mail real |
-| `SEU_FORM_ID` (em `contact.html`) | Seu ID do [Formspree](https://formspree.io) (grátis) — crie uma conta, um formulário, e copie o ID da URL de ação |
-| `href="#"` nos ícones de redes sociais | Links reais do Instagram/TikTok/YouTube |
-| `[Escreva aqui sua história...]`, `[Nome da marca]`, `Marca A/B/C...` | Seus textos e marcas reais |
+| `SEU_FORM_ID` (em `contact.html`) | Seu ID do [Formspree](https://formspree.io) (grátis) |
+| `href="#"` nos ícones de redes sociais | Links reais do Instagram/TikTok |
+| Textos entre `[colchetes]` | Suas informações reais (prazos, pagamento, background, recibo etc.) |
 | `SEU-DOMINIO.com` (em `robots.txt` e `sitemap.xml`) | Seu domínio final |
 
+Textos entre colchetes aparecem principalmente em `about.html` (seção
+Background) e `work-with-me.html` (prazos, pagamento, política de revisão,
+recibo) — são os pontos que dependem da sua situação de negócio atual.
+
 O formulário de contato **não envia nada** até você configurar o Formspree
-(ou outro serviço tipo [Web3Forms](https://web3forms.com), que também é
-grátis e não exige conta). Enquanto isso, ele mostra um aviso amigável em vez
-de falhar silenciosamente.
+(ou [Web3Forms](https://web3forms.com), que também é grátis e não exige
+conta). Enquanto isso, ele mostra um aviso amigável em vez de falhar
+silenciosamente.
 
 ## 2. Textos em PT/EN
 
@@ -49,48 +60,45 @@ Cada elemento de texto tem dois atributos:
 
 O JS troca o conteúdo ao clicar em **PT/EN** no topo do site. Pra editar um
 texto, troque nos dois lugares: no atributo (`data-pt`/`data-en`) **e** no
-conteúdo visível do elemento (que é o que aparece antes do JS rodar — deixe
-sempre igual ao `data-pt`, já que o site abre em português por padrão, ou no
-idioma do navegador do visitante).
+conteúdo visível do elemento.
 
 Para `placeholder` de campos de formulário, use `data-pt-placeholder` /
 `data-en-placeholder`.
 
 ## 3. Portfólio (flipbook) — usando seu PDF
 
-O `portfolio.html` já tem uma "revista" funcional com 5 páginas de exemplo.
-Pra usar seu PDF real:
+O `portfolio.html` tem 8 páginas de exemplo, organizadas pelas categorias:
+Capa, On Camera, Home Studio, Product Photos, Pet Content, Finished Ads,
+UGC Videos, Contracapa.
 
-1. Exporte cada página do PDF como imagem (PNG ou JPG, ~1600px de largura).
-   Pode usar o site [pdf2image](https://www.ilovepdf.com/pdf_to_jpg) ou
-   qualquer conversor de sua preferência.
-2. Salve as imagens em `assets/portfolio/pagina-01.jpg`, `pagina-02.jpg`, etc.
-3. Em cada bloco `.flip-page` do `portfolio.html`, troque a `<div class="placeholder-art">...</div>` por:
+1. Exporte cada página do seu PDF como imagem (PNG/JPG, ~1600px de largura).
+2. Salve em `assets/portfolio/`.
+3. Em cada `.flip-page`, troque o `<div class="placeholder-art">` por:
    ```html
-   <img src="assets/portfolio/pagina-01.jpg" alt="Página 1" style="width:100%;height:100%;object-fit:cover;">
+   <img src="assets/portfolio/pagina-01.jpg" alt="On Camera" style="width:100%;height:100%;object-fit:cover;">
    ```
-4. Copie/cole o bloco `.flip-page` pra ter mais páginas — o JS (`flipbook.js`)
-   detecta automaticamente quantas páginas existem.
+4. Pode adicionar, remover ou reordenar blocos `.flip-page` livremente — o
+   `flipbook.js` se ajusta automaticamente à quantidade de páginas.
 
-## 4. Vídeos clicáveis
+## 4. Vídeos clicáveis + filtro por categoria
 
 Cada item da galeria em `portfolio.html` tem:
 
 ```html
-<div class="gallery-item" data-video-src="LINK_AQUI" data-video-type="iframe">
+<div class="gallery-item" data-category="on-camera" data-video-src="LINK_AQUI" data-video-type="iframe">
 ```
 
-- **YouTube/Vimeo**: use o link de "embed" (ex:
-  `https://www.youtube.com/embed/ID_DO_VIDEO`) com `data-video-type="iframe"`.
-- **Arquivo de vídeo próprio (.mp4)**: coloque o arquivo em `assets/videos/` e
-  use `data-video-type="video"`.
-- Instagram/TikTok não permitem embed direto de forma simples — o mais fácil
-  é baixar o vídeo (com permissão/seu próprio conteúdo) e usar como `.mp4`,
-  ou linkar para o post original em vez de abrir no modal.
+- `data-category` controla o filtro (`on-camera`, `home-studio`, `product`,
+  `pet`, `ads`, `ugc`) — use um dos valores existentes ou adicione um novo
+  botão em `.filter-row` com o mesmo valor em `data-filter`.
+- **YouTube/Vimeo**: link de embed (`https://www.youtube.com/embed/ID`) com
+  `data-video-type="iframe"`.
+- **Arquivo próprio (.mp4)**: coloque em `assets/videos/` e use
+  `data-video-type="video"`.
 
 ## 5. Cores e fontes
 
-Tudo fica em `css/style.css`, no topo, dentro de `:root` (modo claro) e
+Tudo em `css/style.css`, dentro de `:root` (modo claro) e
 `[data-theme="dark"]` (modo escuro):
 
 ```css
@@ -101,29 +109,28 @@ Tudo fica em `css/style.css`, no topo, dentro de `:root` (modo claro) e
 --accent: #B08D57;  /* dourado — detalhes e CTAs */
 ```
 
-As fontes (Cormorant Garamond, Inter, Parisienne) vêm do Google Fonts via
-`@import` no topo do CSS — não precisa instalar nada.
-
 ## 6. Modo claro/escuro
 
-Por padrão o site segue o sistema operacional do visitante
-(`prefers-color-scheme`). O botão de sol/lua no menu permite forçar
-claro ou escuro manualmente (fica salvo no navegador da pessoa).
+Segue o sistema operacional do visitante por padrão
+(`prefers-color-scheme`), com botão de sol/lua pra forçar manualmente.
 
 ## 7. Publicar de graça
 
 ### Cloudflare Pages
 1. Crie uma conta em [pages.cloudflare.com](https://pages.cloudflare.com).
 2. "Create a project" → "Upload assets" (ou conecte um repositório do GitHub).
-3. Arraste a pasta inteira do site (sem subir o `README.md` é opcional, tanto faz).
+3. Arraste a pasta inteira do site.
 4. Não precisa configurar build command — é site estático puro.
-5. Pronto: você recebe uma URL `.pages.dev`, com opção de conectar domínio próprio depois.
 
 ### GitHub Pages
-1. Crie um repositório no GitHub e suba todos os arquivos.
+1. Suba todos os arquivos pra um repositório no GitHub.
 2. Vá em **Settings → Pages**.
-3. Em "Source", selecione a branch `main` e a pasta `/root`.
-4. Salve — em alguns minutos o site fica no ar em `usuario.github.io/repositorio`.
+3. Em "Source", selecione a branch `main` e a pasta `/root` → Save.
+4. Em alguns minutos o site fica no ar em `usuario.github.io/repositorio`
+   (ou na raiz, se o repositório se chamar `usuario.github.io`).
+5. Se a aba **Actions** não mostrar nada rodando, confirme que os arquivos
+   foram realmente commitados na branch `main` e que Actions está habilitado
+   em **Settings → Actions → General**.
 
 ## 8. SEO básico já incluso
 
@@ -131,5 +138,4 @@ claro ou escuro manualmente (fica salvo no navegador da pessoa).
 - `robots.txt` e `sitemap.xml` (troque `SEU-DOMINIO.com` pelo domínio real).
 - HTML semântico (`header`, `main`, `footer`, hierarquia de `h1`/`h2`).
 - Depois de publicar, cadastre o site no
-  [Google Search Console](https://search.google.com/search-console) pra ele
-  ser indexado mais rápido.
+  [Google Search Console](https://search.google.com/search-console).
