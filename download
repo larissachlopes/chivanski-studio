@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sobre | Chivanski Studio</title>
-<meta name="description" content="Conheça a história, os valores e o processo criativo por trás do Chivanski Studio.">
+<meta name="description" content="Pesquisadora, escritora e comunicadora antes de criadora de conteúdo — conheça a história por trás do Chivanski Studio.">
 <meta name="theme-color" content="#5E4A3E">
 <link rel="icon" href="data:,">
 <link rel="stylesheet" href="css/style.css">
@@ -20,9 +20,9 @@
     <nav class="nav-toc" aria-label="Navegação principal">
       <a href="index.html" data-pt="Início" data-en="Home">Início</a>
       <a href="about.html" aria-current="page" data-pt="Sobre" data-en="About">Sobre</a>
+      <a href="services.html" data-pt="O que eu faço" data-en="What I do">O que eu faço</a>
       <a href="portfolio.html" data-pt="Portfólio" data-en="Portfolio">Portfólio</a>
-      <a href="services.html" data-pt="Serviços" data-en="Services">Serviços</a>
-      <a href="media-kit.html" data-pt="Media Kit" data-en="Media Kit">Media Kit</a>
+      <a href="work-with-me.html" data-pt="Work With Me" data-en="Work With Me">Work With Me</a>
       <a href="contact.html" data-pt="Contato" data-en="Contact">Contato</a>
     </nav>
     <div class="nav-controls">
@@ -45,7 +45,7 @@
   <section class="page-hero">
     <div class="container">
       <p class="eyebrow" data-pt="Sobre mim" data-en="About me">Sobre mim</p>
-      <h1 data-pt="Por trás da câmera, uma pessoa de verdade." data-en="Behind the camera, a real person.">Por trás da câmera,<br>uma pessoa de verdade.</h1>
+      <h1 data-pt="Pesquisadora, escritora, comunicadora — e produtora visual." data-en="Researcher, writer, communicator — and visual producer.">Pesquisadora, escritora,<br>comunicadora — e produtora visual.</h1>
     </div>
   </section>
 
@@ -58,13 +58,13 @@
         <span class="frame-tag" data-pt="substitua por sua foto" data-en="replace with your photo">substitua por sua foto</span>
       </div>
       <div class="reveal">
-        <p data-pt="Oi, eu sou a Chivanski! [Escreva aqui sua história em 1–2 parágrafos: como começou a criar conteúdo, o que te tornou boa nisso, e por que marcas devem confiar em você.]" data-en="Hi, I'm Chivanski! [Write your story here in 1–2 paragraphs: how you started creating content, what makes you good at it, and why brands should trust you.]">Oi, eu sou a Chivanski! [Escreva aqui sua história em 1–2 parágrafos: como começou a criar conteúdo, o que te tornou boa nisso, e por que marcas devem confiar em você.]</p>
-        <p data-pt="[Segundo parágrafo — fale do seu estilo, o que te diferencia, e o tipo de marca que você mais gosta de trabalhar.]" data-en="[Second paragraph — talk about your style, what sets you apart, and the kind of brand you most enjoy working with.]">[Segundo parágrafo — fale do seu estilo, o que te diferencia, e o tipo de marca que você mais gosta de trabalhar.]</p>
+        <p data-pt="Antes de ser criadora de conteúdo, sou pesquisadora, escritora e comunicadora. Passei anos construindo narrativas, estruturando ideias e entendendo como uma mensagem realmente chega até alguém — e é isso que trago pra cada vídeo que gravo." data-en="Before I was a content creator, I was a researcher, writer and communicator. I spent years building narratives, structuring ideas and understanding how a message actually lands with someone — and that's what I bring to every video I shoot.">Antes de ser criadora de conteúdo, sou pesquisadora, escritora e comunicadora. Passei anos construindo narrativas, estruturando ideias e entendendo como uma mensagem realmente chega até alguém — e é isso que trago pra cada vídeo que gravo.</p>
+        <p data-pt="Isso significa que cada entrega passa por roteiro, gancho e intenção — não é só ligar a câmera e falar do produto. É produção de conteúdo com estética editorial, pensada pra funcionar tanto no feed quanto em anúncio pago." data-en="That means every deliverable goes through script, hook and intention — it's not just turning on the camera and talking about the product. It's content production with an editorial eye, built to work both in the feed and in paid ads.">Isso significa que cada entrega passa por roteiro, gancho e intenção — não é só ligar a câmera e falar do produto. É produção de conteúdo com estética editorial, pensada pra funcionar tanto no feed quanto em anúncio pago.</p>
         <div class="brand-row" style="margin-top:30px;">
-          <span class="brand-chip">Beleza</span>
-          <span class="brand-chip">Moda</span>
-          <span class="brand-chip">Lifestyle</span>
-          <span class="brand-chip">Casa</span>
+          <span class="brand-chip" data-pt="Pesquisa" data-en="Research">Pesquisa</span>
+          <span class="brand-chip" data-pt="Roteiro" data-en="Script">Roteiro</span>
+          <span class="brand-chip" data-pt="Produção" data-en="Production">Produção</span>
+          <span class="brand-chip" data-pt="Edição" data-en="Editing">Edição</span>
         </div>
       </div>
     </div>
@@ -72,29 +72,44 @@
 
   <hr class="divider">
 
+  <!-- BACKGROUND -->
   <section class="bg-surface">
     <div class="container">
       <div class="section-head reveal">
-        <p class="eyebrow" data-pt="Como trabalho" data-en="How I work">Como trabalho</p>
-        <h2 data-pt="Processo, do briefing à entrega" data-en="Process, from brief to delivery">Processo, do briefing à entrega</h2>
+        <p class="eyebrow" data-pt="Background" data-en="Background">Background</p>
+        <h2 data-pt="Experiência em comunicação e narrativa" data-en="Experience in communication and storytelling">Experiência em comunicação e narrativa</h2>
       </div>
-      <div class="grid-3 reveal">
-        <div class="service-card">
-          <span class="service-num">01</span>
-          <h3 data-pt="Briefing" data-en="Brief">Briefing</h3>
-          <p data-pt="Entendo a marca, o tom de voz e o objetivo da campanha." data-en="I get to know the brand, tone of voice and campaign goal.">Entendo a marca, o tom de voz e o objetivo da campanha.</p>
-        </div>
-        <div class="service-card">
-          <span class="service-num">02</span>
-          <h3 data-pt="Produção" data-en="Production">Produção</h3>
-          <p data-pt="Gravo e edito com uma estética autêntica e cuidada." data-en="I shoot and edit with an authentic, considered look.">Gravo e edito com uma estética autêntica e cuidada.</p>
-        </div>
-        <div class="service-card">
-          <span class="service-num">03</span>
-          <h3 data-pt="Entrega" data-en="Delivery">Entrega</h3>
-          <p data-pt="Arquivos prontos para ads, feed ou stories, no prazo combinado." data-en="Files ready for ads, feed or stories, on the agreed deadline.">Arquivos prontos para ads, feed ou stories, no prazo combinado.</p>
-        </div>
-      </div>
+      <ul class="background-list reveal">
+        <li>
+          <span class="bg-tag">2022</span>
+          <div>
+            <h4>Fundação Estudar</h4>
+            <p data-pt="[Descreva brevemente sua participação/programa na Fundação Estudar.]" data-en="[Briefly describe your role/program at Fundação Estudar.]">[Descreva brevemente sua participação/programa na Fundação Estudar.]</p>
+          </div>
+        </li>
+        <li>
+          <span class="bg-tag">2022</span>
+          <div>
+            <h4>AIESEC</h4>
+            <p data-pt="[Descreva brevemente seu papel na AIESEC — liderança, comunicação, projetos.]" data-en="[Briefly describe your role at AIESEC — leadership, communication, projects.]">[Descreva brevemente seu papel na AIESEC — liderança, comunicação, projetos.]</p>
+          </div>
+        </li>
+        <li>
+          <span class="bg-tag">2023</span>
+          <div>
+            <h4 data-pt="Jovens do Brasil" data-en="Jovens do Brasil">Jovens do Brasil</h4>
+            <p data-pt="[Descreva brevemente sua participação no programa Jovens do Brasil.]" data-en="[Briefly describe your participation in the Jovens do Brasil program.]">[Descreva brevemente sua participação no programa Jovens do Brasil.]</p>
+          </div>
+        </li>
+        <li>
+          <span class="bg-tag">2024</span>
+          <div>
+            <h4 data-pt="Head de Comunicação — Transforma Podcast" data-en="Head of Communications — Transforma Podcast">Head de Comunicação — Transforma Podcast</h4>
+            <p data-pt="[Descreva brevemente suas responsabilidades como Head de Comunicação.]" data-en="[Briefly describe your responsibilities as Head of Communications.]">[Descreva brevemente suas responsabilidades como Head de Comunicação.]</p>
+          </div>
+        </li>
+      </ul>
+      <p class="form-note" style="margin-top:16px;" data-pt="Ajuste os anos e descrições conforme sua trajetória real." data-en="Adjust the years and descriptions to match your real background.">Ajuste os anos e descrições conforme sua trajetória real.</p>
     </div>
   </section>
 
