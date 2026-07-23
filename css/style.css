@@ -383,6 +383,72 @@ section{ padding:100px 0; }
   padding-top:24px; border-top:1px solid var(--line); font-size:.76rem; color:var(--ink-soft);
 }
 
+/* =============== Niches =============== */
+.niche-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--line); border:1px solid var(--line); }
+.niche-card{
+  background:var(--bg); padding:30px 20px; text-align:center; transition:background .3s ease;
+}
+.niche-card:hover{ background:var(--surface); }
+.niche-emoji{ font-size:1.8rem; display:block; margin-bottom:10px; }
+.niche-card span{ font-size:.85rem; color:var(--ink-soft); }
+
+/* =============== Process timeline =============== */
+.process-flow{ display:flex; align-items:flex-start; gap:0; overflow-x:auto; padding-bottom:8px; }
+.process-step{ flex:1 0 150px; text-align:center; position:relative; padding:0 10px; }
+.process-step .service-num{ display:block; margin-bottom:14px; }
+.process-step h4{ font-family:var(--font-display); font-weight:600; font-size:1.15rem; margin:0 0 6px; }
+.process-step p{ font-size:.82rem; margin:0; }
+.process-connector{
+  flex:0 0 auto; width:40px; display:flex; align-items:center; justify-content:center; padding-top:6px; color:var(--accent);
+}
+.process-connector svg{ width:22px; height:22px; }
+
+/* =============== Included checklist =============== */
+.included-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px 32px; }
+.included-item{ display:flex; align-items:center; gap:12px; font-size:.95rem; }
+.included-item svg{ width:18px; height:18px; color:var(--accent); flex:none; }
+
+/* =============== FAQ (details/summary) =============== */
+.faq-list{ border-top:1px solid var(--line); }
+.faq-item{ border-bottom:1px solid var(--line); padding:6px 0; }
+.faq-item summary{
+  cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;
+  padding:18px 2px; font-family:var(--font-display); font-size:1.15rem; font-weight:600;
+}
+.faq-item summary::-webkit-details-marker{ display:none; }
+.faq-item summary .faq-plus{ flex:none; width:20px; height:20px; position:relative; }
+.faq-item summary .faq-plus::before, .faq-item summary .faq-plus::after{
+  content:""; position:absolute; background:var(--accent); top:50%; left:50%; transform:translate(-50%,-50%);
+}
+.faq-item summary .faq-plus::before{ width:14px; height:1.5px; }
+.faq-item summary .faq-plus::after{ width:1.5px; height:14px; transition:transform .25s ease; }
+.faq-item[open] summary .faq-plus::after{ transform:translate(-50%,-50%) rotate(90deg) scaleY(0); }
+.faq-item p{ padding-bottom:18px; margin:0; max-width:65ch; }
+
+/* =============== Background / experience list =============== */
+.background-list{ list-style:none; padding:0; margin:0; border-top:1px solid var(--line); }
+.background-list li{
+  display:grid; grid-template-columns:110px 1fr; gap:24px; padding:26px 0; border-bottom:1px solid var(--line);
+}
+.background-list .bg-tag{ font-family:var(--font-display); font-style:italic; color:var(--accent); }
+.background-list h4{ margin:0 0 6px; font-family:var(--font-display); font-size:1.2rem; }
+.background-list p{ margin:0; font-size:.92rem; }
+
+/* =============== Manifesto quote =============== */
+.manifesto{ max-width:760px; margin:0 auto; text-align:center; }
+.manifesto .not{ font-family:var(--font-display); font-style:italic; font-size:clamp(1.2rem,2.6vw,1.6rem); color:var(--ink-soft); }
+.manifesto .yes{ font-family:var(--font-display); font-style:italic; font-size:clamp(1.6rem,3.4vw,2.4rem); color:var(--ink); margin-top:6px; }
+
+/* =============== Portfolio filter =============== */
+.filter-row{ display:flex; flex-wrap:wrap; gap:10px; margin-bottom:36px; }
+.filter-btn{
+  border:1px solid var(--line); background:transparent; color:var(--ink-soft); padding:9px 18px; border-radius:20px;
+  font-size:.78rem; letter-spacing:.04em; cursor:pointer; transition:.25s ease;
+}
+.filter-btn:hover{ border-color:var(--accent); color:var(--ink); }
+.filter-btn.active{ background:var(--brand); border-color:var(--brand); color:var(--bg); }
+.gallery-item.is-hidden{ display:none; }
+
 /* =============== WhatsApp float =============== */
 .wa-float{
   position:fixed; bottom:26px; right:26px; z-index:200;
