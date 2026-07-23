@@ -144,6 +144,23 @@
     });
   }
 
+  /* ---------------- Filtro de categorias (portfólio) ---------------- */
+  const filterBtns = document.querySelectorAll('[data-filter]');
+  const filterItems = document.querySelectorAll('[data-category]');
+  if(filterBtns.length && filterItems.length){
+    filterBtns.forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        filterBtns.forEach(b=> b.classList.remove('active'));
+        btn.classList.add('active');
+        const target = btn.getAttribute('data-filter');
+        filterItems.forEach(item=>{
+          const show = target === 'all' || item.getAttribute('data-category') === target;
+          item.classList.toggle('is-hidden', !show);
+        });
+      });
+    });
+  }
+
   /* ---------------- Formulário de contato ---------------- */
   const form = document.querySelector('[data-contact-form]');
   if(form){
