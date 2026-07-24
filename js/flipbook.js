@@ -10,6 +10,7 @@
   const pages = Array.from(stage.querySelectorAll('.flip-page'));
   const prevBtn = document.querySelector('[data-flip-prev]');
   const nextBtn = document.querySelector('[data-flip-next]');
+  const resetBtn = document.querySelector('[data-flip-reset]');
   const indexLabel = document.querySelector('[data-flip-index]');
   let current = 0; // número de páginas já viradas (0 = capa fechada)
 
@@ -21,6 +22,7 @@
     });
     prevBtn.disabled = current === 0;
     nextBtn.disabled = current === pages.length;
+    if(resetBtn) resetBtn.disabled = current === 0;
     if(indexLabel){
       indexLabel.textContent = current === 0
         ? '—'
@@ -30,9 +32,11 @@
 
   function next(){ if(current < pages.length){ current++; layout(); } }
   function prev(){ if(current > 0){ current--; layout(); } }
+  function reset(){ current = 0; layout(); }
 
   nextBtn && nextBtn.addEventListener('click', next);
   prevBtn && prevBtn.addEventListener('click', prev);
+  resetBtn && resetBtn.addEventListener('click', reset);
 
   stage.setAttribute('tabindex','0');
   stage.addEventListener('keydown', (e)=>{
