@@ -7,7 +7,7 @@
 <meta name="description" content="Portfólio organizado por categoria — on camera, home studio, fotos de produto, pets, ads finalizados e vídeos UGC.">
 <meta name="theme-color" content="#5E4A3E">
 <link rel="icon" href="data:,">
-<link rel="stylesheet" href="css/style.css?v=3">
+<link rel="stylesheet" href="css/style.css?v=4">
 </head>
 <body>
 
@@ -93,6 +93,9 @@
       </div>
 
       <div class="flip-controls">
+        <button data-flip-reset aria-label="Voltar à capa" title="Voltar à capa">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 12a9 9 0 1 1 3 6.7"/><path d="M3 12V6M3 12h6"/></svg>
+        </button>
         <button data-flip-prev aria-label="Página anterior">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m15 5-7 7 7 7"/></svg>
         </button>
@@ -101,6 +104,7 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m9 5 7 7-7 7"/></svg>
         </button>
       </div>
+      <p class="pdf-note" data-pt="Tem um PDF de portfólio pronto? Exporte cada página como imagem (PNG/JPG) e troque os blocos de placeholder acima pelas suas imagens — instruções no README.txt." data-en="Have a ready portfolio PDF? Export each page as an image (PNG/JPG) and swap the placeholder blocks above for your images — instructions in README.txt.">Tem um PDF de portfólio pronto? Exporte cada página como imagem (PNG/JPG) e troque os blocos de placeholder acima pelas suas imagens — instruções no README.txt.</p>
     </div>
   </section>
 
@@ -114,44 +118,11 @@
         <h2 data-pt="Clique para assistir" data-en="Click to watch">Clique para assistir</h2>
       </div>
 
-      <div class="gallery-grid reveal">
-
-        <div class="gallery-item" data-video-src="https://www.youtube.com/embed/dQw4w9WgXcQ" data-video-type="iframe">
-          <div class="placeholder-art"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="m10 8 6 4-6 4V8Z"/></svg></div>
-          <div class="play-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="m8 5 12 7-12 7V5Z"/></svg></div>
-          <div class="gallery-caption" data-pt="Review sincero — falando direto pra câmera" data-en="Honest review — talking to camera">Review sincero — falando direto pra câmera</div>
-        </div>
-
-        <div class="gallery-item" data-video-src="https://www.youtube.com/embed/dQw4w9WgXcQ" data-video-type="iframe">
-          <div class="placeholder-art"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="m10 8 6 4-6 4V8Z"/></svg></div>
-          <div class="play-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="m8 5 12 7-12 7V5Z"/></svg></div>
-          <div class="gallery-caption" data-pt="GRWM — produzido em home studio" data-en="GRWM — shot in home studio">GRWM — produzido em home studio</div>
-        </div>
-
-        <div class="gallery-item" data-video-src="assets/videos/exemplo.mp4" data-video-type="video">
-          <div class="placeholder-art"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="m10 8 6 4-6 4V8Z"/></svg></div>
-          <div class="play-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="m8 5 12 7-12 7V5Z"/></svg></div>
-          <div class="gallery-caption" data-pt="Unboxing — still de produto" data-en="Unboxing — product photography">Unboxing — still de produto</div>
-        </div>
-
-        <div class="gallery-item" data-video-src="https://www.youtube.com/embed/dQw4w9WgXcQ" data-video-type="iframe">
-          <div class="placeholder-art"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="m10 8 6 4-6 4V8Z"/></svg></div>
-          <div class="play-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="m8 5 12 7-12 7V5Z"/></svg></div>
-          <div class="gallery-caption" data-pt="Review de produto com pet" data-en="Product review featuring a pet">Review de produto com pet</div>
-        </div>
-
-        <div class="gallery-item" data-video-src="https://www.youtube.com/embed/dQw4w9WgXcQ" data-video-type="iframe">
-          <div class="placeholder-art"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="m10 8 6 4-6 4V8Z"/></svg></div>
-          <div class="play-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="m8 5 12 7-12 7V5Z"/></svg></div>
-          <div class="gallery-caption" data-pt="Spark ad — formato finalizado" data-en="Spark ad — finished format">Spark ad — formato finalizado</div>
-        </div>
-
-        <div class="gallery-item" data-video-src="https://www.youtube.com/embed/dQw4w9WgXcQ" data-video-type="iframe">
-          <div class="placeholder-art"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="m10 8 6 4-6 4V8Z"/></svg></div>
-          <div class="play-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="m8 5 12 7-12 7V5Z"/></svg></div>
-          <div class="gallery-caption" data-pt="Storytelling — dia a dia" data-en="Storytelling — day in the life">Storytelling — dia a dia</div>
-        </div>
-
+      <div class="empty-state reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" width="34" height="34"><path d="m10 8 6 4-6 4V8Z"/><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+        <h3 data-pt="Galeria em construção" data-en="Gallery under construction">Galeria em construção</h3>
+        <p data-pt="Estou no início da minha jornada em UGC e ainda estou produzindo os primeiros vídeos junto com novas parcerias. Em breve esse espaço vai estar cheio — se quiser ser uma das primeiras marcas, é só chamar." data-en="I'm at the start of my UGC journey and still producing my first videos alongside new partnerships. This space will fill up soon — if you'd like to be one of the first brands, just reach out.">Estou no início da minha jornada em UGC e ainda estou produzindo os primeiros vídeos junto com novas parcerias. Em breve esse espaço vai estar cheio — se quiser ser uma das primeiras marcas, é só chamar.</p>
+        <a href="contact.html" class="btn btn-ghost" data-pt="Fale comigo" data-en="Get in touch">Fale comigo</a>
       </div>
     </div>
   </section>
@@ -176,7 +147,7 @@
   <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.2-.6.8-.8 1-.1.2-.3.2-.6.1-.2-.1-1-.4-1.9-1.2-.7-.6-1.2-1.4-1.3-1.6-.1-.2 0-.4.1-.5.1-.1.2-.3.4-.4.1-.2.2-.3.2-.5.1-.2 0-.4 0-.5s-.6-1.4-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.2-.9.9-.9 2.2s1 2.6 1.1 2.7c.1.2 2 3 4.7 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>
 </a>
 
-<script src="js/script.js"></script>
-<script src="js/flipbook.js"></script>
+<script src="js/script.js?v=2"></script>
+<script src="js/flipbook.js?v=2"></script>
 </body>
 </html>
